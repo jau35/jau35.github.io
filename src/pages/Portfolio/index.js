@@ -15,7 +15,7 @@ class Portfolio extends Component {
                                 </h1>
                                 <p className="link-nav">
                                     <span className="box">
-                                        <Link to="/.html">Home </Link>
+                                        <Link to="/">Home </Link>
                                         <Link to="/portfolio">Portfolio</Link>
                                     </span>
                                 </p>

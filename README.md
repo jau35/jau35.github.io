@@ -1,3 +1,16 @@
+## Project Structure:
+
+- **develop** branch is for active development
+- **master** branch is what GitHub Pages deploys from (since this is a user site, this cannot be changed)
+- **gh-pages** branch is where the built react files are published. Merge **gh-pages** into **master** to deploy site
+
+## Development Workflow
+
+- Contribute to **develop** branch
+- Run 'npm run deploy' to build react project and publish to **gh-pages** branch
+- Merge **gh-pages** into **master** to deploy to jau35.github.io
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
