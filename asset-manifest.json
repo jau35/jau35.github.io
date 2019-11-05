@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bfab5585.chunk.css",
+    "main.js": "/static/js/main.dc65a28c.chunk.js",
+    "main.js.map": "/static/js/main.dc65a28c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f9abf3e9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f9abf3e9.js.map",
+    "static/js/2.93c08c29.chunk.js": "/static/js/2.93c08c29.chunk.js",
+    "static/js/2.93c08c29.chunk.js.map": "/static/js/2.93c08c29.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2e3cad4debedf942de03a483f3d6780d.js": "/precache-manifest.2e3cad4debedf942de03a483f3d6780d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.bfab5585.chunk.css.map": "/static/css/main.bfab5585.chunk.css.map",
+    "static/media/linearicons.css": "/static/media/Linearicons-Free.b9b7f23c.eot",
+    "static/media/about-img.jpg": "/static/media/about-img.dfe2234b.jpg",
+    "static/media/main.css": "/static/media/blog-home-banner.ae8efad4.jpg",
+    "static/media/banner-img.png": "/static/media/banner-img.a7f2cf43.png",
+    "static/media/bentleysystems.png": "/static/media/bentleysystems.9f2045b4.png",
+    "static/media/cardconnect.png": "/static/media/cardconnect.5383bba8.png",
+    "static/media/drexel.png": "/static/media/drexel.69d5173e.png",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/siemens.png": "/static/media/siemens.7fddc33b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f9abf3e9.js",
+    "static/js/2.93c08c29.chunk.js",
+    "static/css/main.bfab5585.chunk.css",
+    "static/js/main.dc65a28c.chunk.js"
+  ]
+}
