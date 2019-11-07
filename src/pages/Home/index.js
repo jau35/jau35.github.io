@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import PreLoader from '../../components/PreLoader'
 import AboutMyself from '../About/AboutMyself'
 
 import banner_img from '../../static/img/banner-img.png';
@@ -12,7 +13,9 @@ import brand_drexel from '../../static/img/brand/drexel.png';
 class Home extends Component {
     render() {
         return (
-            <React.Fragment>
+            <React.Fragment>    
+                <PreLoader />
+                        
                 <section className="home-banner-area">
                     <div className="container">
                         <div className="row fullscreen d-flex align-items-center">
@@ -21,9 +24,9 @@ class Home extends Component {
                                 <h1 className="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">Joe Urbano</h1>
                                 <div className="designation mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.1s">
                                     Software
-						<span className="developer">Developer</span>
+						            <span className="developer">Developer</span>
                                     and aspiring
-						<span className="entrepreneur">Entrepreneur</span>
+						            <span className="entrepreneur">Entrepreneur</span>
                                 </div>
                             </div>
                             <div className="banner-img col-lg-6 col-md-6 align-self-end">

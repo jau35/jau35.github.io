@@ -1,0 +1,41 @@
+.preloader-area {
+    -webkit-animation:fadeOut 0.5s;
+    -webkit-animation-delay:0.5s;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation:fadeOut 0.5s;
+    -moz-animation-delay:0.5s;
+    -moz-animation-fill-mode:forwards;
+    animation:fadeOut 0.5s;
+    animation-delay:0.5s;
+    animation-fill-mode:forwards;
+}
+@-webkit-keyframes fadeOut {
+    from {
+        opacity:1;
+        visibility: visible;
+    }
+    to {
+        opacity:0;
+        visibility: hidden;
+    }
+}
+@-moz-keyframes fadeOut {
+    from {
+        opacity:1;
+        visibility: visible;
+    }
+    to {
+        opacity:0;
+        visibility: hidden;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity:1;
+        visibility: visible;
+    }
+    to {
+        opacity:0;
+        visibility: hidden;
+    }
+}

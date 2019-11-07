@@ -44,9 +44,9 @@ $(document).ready(function () {
     };
 
     //------- Pre Loader --------//  
-    $(window).on('load', function () {
-        $(".preloader-area").delay(200).fadeOut(500);
-    })
+    //$(window).on('load', function () {
+    //    $(".preloader-area").delay(200).fadeOut(500);
+    //})
 
     //------- Lightbox  js --------//  
     $('.img-gal').magnificPopup({
