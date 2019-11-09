@@ -1,4 +1,4 @@
-$(document).ready(function () {
+onLoad = function () {
     "use strict";
 
     var window_width = $(window).width(),
@@ -487,5 +487,8 @@ $(document).ready(function () {
     // $(document).ready(function () {
     //     $('#mc_embed_signup').find('form').ajaxChimp();
     // });
+};
 
-});
+$(document).ready(onLoad);
+
+$(window).bind('hashchange', onLoad);
