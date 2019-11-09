@@ -62,7 +62,7 @@ class Home extends Component {
                     </div>
                 </section>
 
-                <AboutMyself />
+                <AboutMyself page={'home'} />
 
             </React.Fragment>
         );

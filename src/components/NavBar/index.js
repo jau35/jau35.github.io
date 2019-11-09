@@ -8,7 +8,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <header id="header" class={this.props.primary ? "" : "dark"}>
+            <header id="header" className={this.props.primary ? "" : "dark"}>
                 <div className="container main-menu">
                     <div className="row align-items-center d-flex">
                         <div id="logo">

@@ -11,7 +11,7 @@ class About extends Component {
         return (
             <React.Fragment>
                 <NavBar primary={false} />
-                
+
                 <section className="banner-area relative">
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
@@ -29,7 +29,7 @@ class About extends Component {
                     </div>
                 </section>
 
-                <AboutMyself />
+                <AboutMyself page={'about'}/>
 
                 <Experience />
             </React.Fragment>

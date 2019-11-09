@@ -1195,6 +1195,9 @@ td, th {
     -o-transition-delay: 1s;
     transition-delay: 1s;
 }
+.primary-btn.small-font {
+    font-size: 12px;
+}
 .primary-btn span {
     display: inline-block;
     padding: 12px 0;
