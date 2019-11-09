@@ -482,6 +482,26 @@ onLoad = function () {
         }
     }
 
+    function hashHandler() {
+        const path = window.location.hash.slice(1) // remove leading '#'
+        const id = path.split('#')[1];
+        if (id) {
+            var retries = 0;
+            const scroll = () => {
+                retries += 1;
+                if (retries > 50) return;
+                const element = document.getElementById(id);
+                if (element) {
+                    setTimeout(() => element.scrollIntoView(), 0);
+                } else {
+                    setTimeout(scroll, 100);
+                }
+            };
+            scroll();
+        }
+      }
+    hashHandler();
+
     //------- Mailchimp js --------//  
 
     // $(document).ready(function () {
