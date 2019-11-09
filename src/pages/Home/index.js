@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import NavBar from '../../components/NavBar'
 import PreLoader from '../../components/PreLoader'
 import AboutMyself from '../About/AboutMyself'
 
@@ -13,7 +14,8 @@ import brand_drexel from '../../static/img/brand/drexel.png';
 class Home extends Component {
     render() {
         return (
-            <React.Fragment>    
+            <React.Fragment>
+                <NavBar primary={true} />
                 <PreLoader />
                         
                 <section className="home-banner-area">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
 
+import NavBar from '../../components/NavBar'
 import AboutMyself from './AboutMyself'
 import Experience from './Experience'
 
@@ -9,7 +10,8 @@ class About extends Component {
     render() {
         return (
             <React.Fragment>
-
+                <NavBar primary={false} />
+                
                 <section className="banner-area relative">
                     <div className="container">
                         <div className="row d-flex align-items-center justify-content-center">
