@@ -35,7 +35,7 @@ class AboutMyself extends Component {
                             </div>
 
                             {this.props.page === 'home' ? 
-                                <Link to="/about#experience" className="primary-btn white" data-text="More Info">
+                                <Link to="/about#experience" className="primary-btn white" data-text="More Info" style={{marginRight: '10px'}}>
                                     <span>M</span>
                                     <span>O</span>
                                     <span>R</span>
