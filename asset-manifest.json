@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.7eac2bca.chunk.css",
-    "main.js": "/static/js/main.a3f23ac3.chunk.js",
-    "main.js.map": "/static/js/main.a3f23ac3.chunk.js.map",
+    "main.js": "/static/js/main.afaf15c1.chunk.js",
+    "main.js.map": "/static/js/main.afaf15c1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f9abf3e9.js",
     "runtime-main.js.map": "/static/js/runtime-main.f9abf3e9.js.map",
     "static/js/2.ee1ff108.chunk.js": "/static/js/2.ee1ff108.chunk.js",
     "static/js/2.ee1ff108.chunk.js.map": "/static/js/2.ee1ff108.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b853a1e4825638e6702063c2da2e2a12.js": "/precache-manifest.b853a1e4825638e6702063c2da2e2a12.js",
+    "precache-manifest.4d9bf3ad0e8a0e04494ed96b2aee1337.js": "/precache-manifest.4d9bf3ad0e8a0e04494ed96b2aee1337.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.7eac2bca.chunk.css.map": "/static/css/main.7eac2bca.chunk.css.map",
     "static/media/linearicons.css": "/static/media/Linearicons-Free.b9b7f23c.eot",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.f9abf3e9.js",
     "static/js/2.ee1ff108.chunk.js",
     "static/css/main.7eac2bca.chunk.css",
-    "static/js/main.a3f23ac3.chunk.js"
+    "static/js/main.afaf15c1.chunk.js"
   ]
 }
