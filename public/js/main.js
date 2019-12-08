@@ -47,16 +47,6 @@ initMobileNav = function () {
     //------- Mobile Nav  js --------//  
 
     if ($('#nav-menu-container').length) {
-        var $mobile_nav = $('#nav-menu-container').clone().prop({
-            id: 'mobile-nav'
-        });
-        $mobile_nav.find('> ul').attr({
-            'class': '',
-            'id': ''
-        });
-        $('body').append($mobile_nav);
-        $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>');
-        $('body').append('<div id="mobile-body-overly"></div>');
         $('#mobile-nav').find('.menu-has-children').prepend('<i class="lnr lnr-chevron-down"></i>');
 
         $(document).on('click', '.menu-has-children i', function (e) {
@@ -80,6 +70,12 @@ initMobileNav = function () {
                     $('#mobile-body-overly').fadeOut();
                 }
             }
+        });
+
+        $(document).on('click', '.mobile-link', function (e) {
+            $('body').removeClass('mobile-nav-active');
+            $('#mobile-body-overly').fadeOut();
+            $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
         });
     } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
         $("#mobile-nav, #mobile-nav-toggle").hide();
