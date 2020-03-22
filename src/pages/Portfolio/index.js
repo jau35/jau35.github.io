@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
-
 import { Link } from "react-router-dom";
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 import NavBar from '../../components/NavBar'
 
 class Portfolio extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            //eta: 10
+        };
+    }
+
+    componentDidMount() {
+        const rootRef = firebase.database().ref().child('portfolio');
+        const etaRef = rootRef.child('eta');
+        etaRef.once('value', val => {
+            this.setState({
+                eta: val.val()
+            });
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -40,6 +59,13 @@ class Portfolio extends Component {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+
+                        <div>
+                            <h1>Number of days until more content:</h1>
+                            <h2>
+                                {this.state.eta}
+                            </h2>
                         </div>
                     </div>
                 </section>
