@@ -24,10 +24,7 @@ class Experience extends Component {
                                     </div>
                                     <div className="top-right">
                                         <div className="primary-btn" data-text="Jul '19 to Present">
-                                            <span>J</span><span>u</span><span>l</span>
-                                            <span>'</span><span>1</span><span>9</span>
-                                            <span>t</span><span>o</span>
-                                            <span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
+                                            <span>J</span><span>u</span><span>l</span> <span>'</span><span>1</span><span>9</span> <span>t</span><span>o</span> <span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
                                         </div>
                                     </div>
                                 </div>
@@ -50,10 +47,7 @@ class Experience extends Component {
                                     </div>
                                     <div className="top-right">
                                         <div className="primary-btn" data-text="Apr to Sept '18">
-                                            <span>A</span><span>p</span><span>r</span>
-                                            <span>t</span><span>o</span>
-                                            <span>S</span><span>e</span><span>p</span><span>t</span>
-                                            <span>'</span><span>1</span><span>8</span>
+                                            <span>A</span><span>p</span><span>r</span> <span>t</span><span>o</span> <span>S</span><span>e</span><span>p</span><span>t</span> <span>'</span><span>1</span><span>8</span>
                                         </div>
                                     </div>
                                 </div>
@@ -84,10 +78,7 @@ class Experience extends Component {
                                     </div>
                                     <div className="top-right">
                                         <div className="primary-btn" data-text="Apr to Sept '17">
-                                            <span>A</span><span>p</span><span>r</span>
-                                            <span>t</span><span>o</span>
-                                            <span>S</span><span>e</span><span>p</span><span>t</span>
-                                            <span>'</span><span>1</span><span>7</span>
+                                            <span>A</span><span>p</span><span>r</span> <span>t</span><span>o</span> <span>S</span><span>e</span><span>p</span><span>t</span> <span>'</span><span>1</span><span>7</span>
                                         </div>
                                     </div>
                                 </div>
@@ -117,10 +108,7 @@ class Experience extends Component {
                                     </div>
                                     <div className="top-right">
                                         <div className="primary-btn" data-text="Apr to Sept '16">
-                                            <span>A</span><span>p</span><span>r</span>
-                                            <span>t</span><span>o</span>
-                                            <span>S</span><span>e</span><span>p</span><span>t</span>
-                                            <span>'</span><span>1</span><span>6</span>
+                                            <span>A</span><span>p</span><span>r</span> <span>t</span><span>o</span> <span>S</span><span>e</span><span>p</span><span>t</span> <span>'</span><span>1</span><span>6</span>
                                         </div>
                                     </div>
                                 </div>
@@ -150,10 +138,7 @@ class Experience extends Component {
                                     </div>
                                     <div className="top-right">
                                         <div className="primary-btn" data-text="Jul to Sept '15">
-                                            <span>J</span><span>u</span><span>l</span>
-                                            <span>t</span><span>o</span>
-                                            <span>S</span><span>e</span><span>p</span><span>t</span>
-                                            <span>'</span><span>1</span><span>5</span>
+                                            <span>J</span><span>u</span><span>l</span> <span>t</span><span>o</span> <span>S</span><span>e</span><span>p</span><span>t</span> <span>'</span><span>1</span><span>5</span>
                                         </div>
                                     </div>
                                 </div>

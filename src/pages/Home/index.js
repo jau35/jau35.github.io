@@ -25,10 +25,7 @@ class Home extends Component {
                                 <div className="me wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.2s">Welcome!</div>
                                 <h1 className="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">Joe Urbano</h1>
                                 <div className="designation mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.1s">
-                                    Software
-						            <span className="developer">Developer</span>
-                                    and aspiring
-						            <span className="entrepreneur">Entrepreneur</span>
+                                    Software <span className="developer">Developer</span> and aspiring <span className="entrepreneur">Entrepreneur</span>
                                 </div>
                             </div>
                             <div className="banner-img col-lg-6 col-md-6 align-self-end">

@@ -36,38 +36,17 @@ class AboutMyself extends Component {
 
                             {this.props.page === 'home' ? 
                                 <Link to="/about#experience" className="primary-btn white" data-text="More Info" style={{marginRight: '10px'}}>
-                                    <span>M</span>
-                                    <span>O</span>
-                                    <span>R</span>
-                                    <span>E</span>
-                                    <span> </span>
-                                    <span>I</span>
-                                    <span>N</span>
-                                    <span>F</span>
-                                    <span>O</span>
+                                    <span>M</span><span>O</span><span>R</span><span>E</span> <span>I</span><span>N</span><span>F</span><span>O</span>
                                 </Link>
                             : '' }
 
                             <a href="/docs/JosephUrbano_resume.pdf" className="primary-btn" data-text="Resume" target="_blank" download>
-                                <span>R</span>
-                                <span>E</span>
-                                <span>S</span>
-                                <span>U</span>
-                                <span>M</span>
-                                <span>E</span>
+                                <span>R</span><span>E</span><span>S</span><span>U</span><span>M</span><span>E</span>
                             </a>
 
                             {this.props.page === 'about' ?
                                 <a href="/docs/JosephUrbano_resume_printable.pdf" className="primary-btn white small-font" style={{marginLeft: '10px'}} data-text="Printing? Use this instead." target="_blank" download>
-                                    <span>P</span>
-                                    <span>R</span>
-                                    <span>I</span>
-                                    <span>N</span>
-                                    <span>T</span>
-                                    <span>A</span>
-                                    <span>B</span>
-                                    <span>L</span>
-                                    <span>E</span>
+                                    <span>P</span><span>R</span><span>I</span><span>N</span><span>T</span><span>A</span><span>B</span><span>L</span><span>E</span>
                                 </a>
                             : ''}
                         </div>

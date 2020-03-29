@@ -50,7 +50,9 @@ const Login = () => {
                             <form onSubmit={e => handleForm(e)}>
                                 <input className="single-input" value={email} onChange={e => setEmail(e.target.value)} name="email" type="email" placeholder="Email"/>
                                 <input className="single-input" value={password} onChange={e => setPassword(e.target.value)} name="password" type="password" placeholder="Password"/>
-                                <button className="primary-btn" type= "submit">Login</button>
+                                <button className="primary-btn" data-text="Login" type="submit">
+                                    <span>L</span><span>O</span><span>G</span><span>I</span><span>N</span>
+                                </button>
                                 <span style={{color: '#e45447'}}>{error}</span>
                             </form>
                         </div>
