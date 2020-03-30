@@ -1,10 +1,33 @@
 import React, { Component } from 'react';
-
 import { Link } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/storage';
 
 import about_img from '../../../static/img/about-img.jpg'
 
 class AboutMyself extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            resume_color: null,
+            resume_printable: null
+        };
+    }
+
+    componentDidMount() {
+        const storageRef = firebase.storage().ref();
+        const resumeRef = storageRef.child('resume');
+
+        resumeRef.child('JosephUrbano_resume.pdf').getDownloadURL().then((url)=> {
+            this.setState( {resume_color: url});
+        });
+
+        resumeRef.child('JosephUrbano_resume_printable.pdf').getDownloadURL().then((url)=> {
+            this.setState( {resume_printable: url});
+        });
+    }
+
     render() {
         return (
             <section className="about-area section-gap">
@@ -40,12 +63,12 @@ class AboutMyself extends Component {
                                 </Link>
                             : '' }
 
-                            <a href="/docs/JosephUrbano_resume.pdf" className="primary-btn" data-text="Resume" target="_blank" download>
+                            <a href={this.state.resume_color} className="primary-btn" data-text="Resume" download>
                                 <span>R</span><span>E</span><span>S</span><span>U</span><span>M</span><span>E</span>
                             </a>
 
                             {this.props.page === 'about' ?
-                                <a href="/docs/JosephUrbano_resume_printable.pdf" className="primary-btn white small-font" style={{marginLeft: '10px'}} data-text="Printing? Use this instead." target="_blank" download>
+                                <a href={this.state.resume_printable} className="primary-btn white small-font" style={{marginLeft: '10px'}} data-text="Printing? Use this instead." download>
                                     <span>P</span><span>R</span><span>I</span><span>N</span><span>T</span><span>A</span><span>B</span><span>L</span><span>E</span>
                                 </a>
                             : ''}
