@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import NavBar from '../../components/NavBar'
-import { AuthContext } from '../../components/App'
+import NavBar from '../../Common/NavBar'
+import { AuthContext } from '../../App'
 
 const Login = () => {
     const Auth = useContext(AuthContext);
@@ -22,24 +22,18 @@ const Login = () => {
         });
     };
 
-    if (Auth.loggedInUser) {
-        return (
-            <React.Fragment>
-                <NavBar primary={false} />
-                    <section className="banner-area section-gap-top section-gap-bottom-90">
-                        <div className="container" >
-                            <h1 className="text-white">
-                                Congrats... you're logged in as {Auth.loggedInUser.email}
-                            </h1>
-                        </div>
-                    </section>
-            </React.Fragment>
-        )
-    }
-    else {
-        return (
-            <React.Fragment>
-                <NavBar primary={false} />
+    return (
+        <>
+            <NavBar primary={false} />
+            { Auth.loggedInUser ? (
+                <section className="banner-area section-gap-top section-gap-bottom-90">
+                    <div className="container" >
+                        <h1 className="text-white">
+                            Congrats... you're logged in as {Auth.loggedInUser.email}
+                        </h1>
+                    </div>
+                </section>
+            ) : (
                 <section className="banner-area section-gap-top section-gap-bottom-90">
                     <div className="container" >
                         <div className="section-title">
@@ -58,9 +52,9 @@ const Login = () => {
                         </div>
                     </div>
                 </section>
-            </React.Fragment>
-        );
-    }
+            )}
+        </>
+    );
 }
 
 export default Login;

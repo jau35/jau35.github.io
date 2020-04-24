@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/storage';
 
-import about_img from '../../../static/img/about-img.jpg'
+import about_img from '../../../../static/img/about-img.jpg'
 
 class AboutMyself extends Component {
 

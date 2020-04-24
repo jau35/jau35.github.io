@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-import NavBar from '../../components/NavBar'
-import PreLoader from '../../components/PreLoader'
-import AboutMyself from '../About/AboutMyself'
+import NavBar from '../../Common/NavBar'
+import PreLoader from '../../Common/PreLoader'
+import AboutMyself from '../About/AboutMyself/AboutMyself'
 
-import banner_img from '../../static/img/banner-img.png';
-import brand_cardconnect from '../../static/img/brand/cardconnect.png';
-import brand_bentleysystems from '../../static/img/brand/bentleysystems.png';
-import brand_sig from '../../static/img/brand/sig.png';
-import brand_siemens from '../../static/img/brand/siemens.png';
-import brand_drexel from '../../static/img/brand/drexel.png';
+import banner_img from '../../../static/img/banner-img.png';
+import brand_cardconnect from '../../../static/img/brand/cardconnect.png';
+import brand_bentleysystems from '../../../static/img/brand/bentleysystems.png';
+import brand_sig from '../../../static/img/brand/sig.png';
+import brand_siemens from '../../../static/img/brand/siemens.png';
+import brand_drexel from '../../../static/img/brand/drexel.png';
 
 class Home extends Component {
     render() {

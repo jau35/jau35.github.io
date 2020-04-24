@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { HashRouter, Route } from "react-router-dom";
 
-import Footer from '../Footer'
-import Contact from '../Contact'
-import ScrollToTop from '../ScrollToTop'
+import Footer from './Common/Footer'
+import Contact from './Common/Contact'
+import ScrollToTop from './Common/ScrollToTop'
 
-import Home from '../../pages/Home'
-import About from '../../pages/About'
-import Portfolio from '../../pages/Portfolio'
-import Account from '../../pages/Account'
+import Home from './Pages/Home/Home'
+import About from './Pages/About/About'
+import Portfolio from './Pages/Portfolio/Portfolio'
+import Login from './Pages/Account/Login'
 
 import AuthListener from './AuthListener'
 
@@ -26,7 +26,7 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
                     <Route path="/portfolio" component={Portfolio} />
-                    <Route path="/account" component={Account} />
+                    <Route path="/account" component={Login} />
 
                     <Contact />
                     <Footer />

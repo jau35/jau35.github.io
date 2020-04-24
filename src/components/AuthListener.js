@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import { AuthContext } from '..'
+import { AuthContext } from './App'
 
 const AuthListener = () => {
     const Auth = useContext(AuthContext);

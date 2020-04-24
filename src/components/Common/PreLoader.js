@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './index.css'
+import './PreLoader.css'
 
 class PreLoader extends Component {
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import firebase from 'firebase/app';
 import 'firebase/database';
 
-import NavBar from '../../components/NavBar'
+import NavBar from '../../Common/NavBar'
 
 class Portfolio extends Component {
 

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import { Link } from "react-router-dom";
 
-import NavBar from '../../components/NavBar'
-import AboutMyself from './AboutMyself'
-import Experience from './Experience'
+import NavBar from '../../Common/NavBar'
+import AboutMyself from './AboutMyself/AboutMyself'
+import Experience from './Experience/Experience'
 
 class About extends Component {
     render() {
