@@ -5,11 +5,11 @@ import logo from '../../static/img/logo.png';
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import { AuthContext } from '../App';
+import { ConfigContext } from '../App';
 
 
 const Footer = () => {
-    const Auth = useContext(AuthContext);
+    const context = useContext(ConfigContext);
 
     return (
         <footer className="footer-area">
@@ -32,14 +32,16 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                { 
-                    Auth.loggedInUser ?
-                    <div className="row footer-bottom justify-content-center">
-                        <Link className="active" to="/" onClick={() => firebase.auth().signOut()}>Log out</Link>
-                    </div> :
-                    <div className="row footer-bottom justify-content-center">
-                        <Link className="active" to="/account">Log in</Link>
-                    </div>
+                {
+                    context.loggedInUser ? (
+                        <div className="row footer-bottom justify-content-center">
+                            <Link className="active" to="/" onClick={() => firebase.auth().signOut()}>Log out</Link>
+                        </div>
+                    ) : (
+                        <div className="row footer-bottom justify-content-center">
+                            <Link className="active" to="/account">Log in</Link>
+                        </div>
+                    )
                 }
                 <div className="row footer-bottom justify-content-center">
                     <p className="col-lg-8 col-sm-12 footer-text">

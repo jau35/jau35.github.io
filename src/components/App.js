@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashRouter, Route } from "react-router-dom";
 
+import NavBar from './Common/NavBar'
 import Footer from './Common/Footer'
 import Contact from './Common/Contact'
 import ScrollToTop from './Common/ScrollToTop'
@@ -10,14 +11,16 @@ import About from './Pages/About/About'
 import Portfolio from './Pages/Portfolio/Portfolio'
 import Login from './Pages/Account/Login'
 
-export const AuthContext = React.createContext(null);
+export const ConfigContext = React.createContext(null);
 
-const App = ({loggedInUser}) => {    
+const App = ({loggedInUser}) => {
+    const [theme, setTheme] = useState('primary');
+
     return (
-        <AuthContext.Provider value={{ loggedInUser }}>
+        <ConfigContext.Provider value={{ loggedInUser, theme, setTheme }}>
             <HashRouter basename="/">
-                <React.Fragment>
-
+                <>
+                    <NavBar />
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
                     <Route path="/portfolio" component={Portfolio} />
@@ -26,9 +29,9 @@ const App = ({loggedInUser}) => {
                     <Contact />
                     <Footer />
                     <ScrollToTop />
-                </React.Fragment>
+                </>
             </HashRouter>
-        </AuthContext.Provider>
+        </ConfigContext.Provider>
     );
 }
 
