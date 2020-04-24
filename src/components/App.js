@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HashRouter, Route } from "react-router-dom";
 
 import Footer from './Common/Footer'
@@ -10,16 +10,11 @@ import About from './Pages/About/About'
 import Portfolio from './Pages/Portfolio/Portfolio'
 import Login from './Pages/Account/Login'
 
-import AuthListener from './AuthListener'
-
 export const AuthContext = React.createContext(null);
 
-function App() {    
-    const [loggedInUser, setLoggedInUser] = useState(null);
-
+const App = ({loggedInUser}) => {    
     return (
-        <AuthContext.Provider value={{ loggedInUser, setLoggedInUser }}>
-            <AuthListener/>
+        <AuthContext.Provider value={{ loggedInUser }}>
             <HashRouter basename="/">
                 <React.Fragment>
 

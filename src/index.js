@@ -31,9 +31,21 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-ReactDOM.render(
-    <App/>, 
-    document.getElementById('root'));
+const render = (user) => {
+    ReactDOM.render(
+        <App loggedInUser={user} />, 
+        document.getElementById('root'));
+}
+render(null);
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+    let user = null;
+    if (firebaseUser) {
+        user = firebaseUser;
+    }
+
+    render(user);
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
