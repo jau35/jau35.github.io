@@ -1,0 +1,15 @@
+.job-title {
+    display: inline-block;
+}
+
+.button-layout {
+    display: inline;
+}
+
+.button-layout .primary-btn {
+    margin-left: 10px;
+}
+
+.job-card-form-container {
+    width: 100%;
+}
