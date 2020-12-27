@@ -14,13 +14,9 @@ const Portfolio = () => {
     useEffect(() => {
         const rootRef = firebase.database().ref().child('portfolio');
         const etaRef = rootRef.child('eta');
-        const unsubscribe = etaRef.once('value', (val) => {
+        etaRef.once('value', (val) => {
             setEta(val.val());
         });
-
-        return () => {
-            unsubscribe();
-        };
     }, []);
 
     return (
