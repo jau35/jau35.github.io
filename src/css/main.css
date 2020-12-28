@@ -1038,7 +1038,6 @@ th {
     border: 1px solid #e45447;
     vertical-align: middle;
     position: relative;
-    z-index: 1;
     cursor: pointer;
     text-align: center;
     -webkit-backface-visibility: hidden;

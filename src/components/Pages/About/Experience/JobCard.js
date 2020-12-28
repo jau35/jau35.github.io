@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import './index.css';
 
 import Button from '../../../Common/Button';
+import Confirm from '../../../Common/Dialog/Confirm';
 import { ConfigContext } from '../../../App';
 import JobCardForm from './JobCardForm';
 
@@ -10,8 +11,25 @@ const JobCard = (props) => {
     const context = useContext(ConfigContext);
 
     const [isEditing, setIsEditing] = useState(false);
+    const [showConfirmationDialog, setShowConfirmationDialog] = useState(false);
 
     const dateText = props.job.startDate + ' to ' + props.job.endDate;
+
+    let confirmationDialog = (
+        <Confirm
+            show={showConfirmationDialog}
+            setShow={setShowConfirmationDialog}
+            title='Delete Experience?'
+            content={
+                <>
+                    Are you sure you want to delete the experience of{' '}
+                    <b>{props.job.title}</b> at <b>{props.job.company}</b>?
+                </>
+            }
+            onCancel={() => {}}
+            onConfirm={() => props.deleteJobCallback(props.job)}
+        />
+    );
 
     return (
         <>
@@ -34,9 +52,10 @@ const JobCard = (props) => {
                                     <Button
                                         icon='fa-trash'
                                         onClickCallback={() =>
-                                            props.deleteJobCallback(props.job)
+                                            setShowConfirmationDialog(true)
                                         }
                                     />
+                                    {confirmationDialog}
                                     <Button
                                         icon='fa-edit'
                                         onClickCallback={() =>
