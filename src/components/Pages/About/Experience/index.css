@@ -1,3 +1,7 @@
+.job-area.offwhite {
+    background: #f9f9ff;
+}
+
 .job-title {
     display: inline-block;
 }
@@ -12,4 +16,86 @@
 
 .job-card-form-container {
     width: 100%;
+}
+
+.single-job {
+    background-color: #f9f9ff;
+    padding: 40px 30px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+@media (max-width: 576px) {
+    .single-job .top-sec {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+.single-job .top-left h4 {
+    color: #000;
+    font-size: 21px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+}
+.single-job .top-left h5 {
+    color: #000;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+}
+@media (max-width: 1199px) {
+    .single-job .top-left h4 {
+        font-size: 18px;
+    }
+    .single-job .top-left h5 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 576px) {
+    .single-job .bottom-sec {
+        margin-top: 30px;
+    }
+}
+.single-job .primary-btn {
+    padding: 0 28px;
+    background: #fff;
+    color: #222222;
+    border: 1px solid #90acd1;
+}
+@media (max-width: 1199px) {
+    .single-job .primary-btn {
+        padding: 0 15px;
+    }
+}
+.single-job .primary-btn span {
+    color: #222222;
+}
+.single-job .primary-btn:before {
+    color: #222222;
+}
+.single-job:hover {
+    background: #90acd1;
+    color: #fff;
+}
+.single-job:hover .top-left h4 {
+    color: #fff;
+}
+
+.single-job:hover .top-left h5 {
+    color: #fff;
 }

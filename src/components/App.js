@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import NavBar from './Common/NavBar';
-import Footer from './Common/Footer';
-import Contact from './Common/Contact';
+import NavBar from './Common/Layout/NavBar';
+import Footer from './Common/Layout/Footer';
+import Contact from './Common/Layout/Contact';
 import ScrollToTop from './Common/ScrollToTop';
 
-import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
-import Portfolio from './Pages/Portfolio/Portfolio';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Portfolio from './Pages/Portfolio';
 import Login from './Pages/Account/Login';
 import PageNotFound from './Pages/Errors/PageNotFound';
 

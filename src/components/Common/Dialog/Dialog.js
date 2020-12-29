@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from '../Button';
 
-import './Dialog.css';
+import './index.css';
 
 const Dialog = (props) => {
     let { title, children, show, setShow, actions } = props;

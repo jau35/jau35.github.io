@@ -4,11 +4,8 @@ import ReactDOM from 'react-dom';
 import firebase from 'firebase/app';
 import 'firebase/analytics';
 
-import './css/linearicons.css';
 import './css/font-awesome.min.css';
 import './css/bootstrap.css';
-import './css/magnific-popup.css';
-import './css/nice-select.css';
 import './css/animate.min.css';
 import './css/owl.carousel.css';
 import './css/main.css';

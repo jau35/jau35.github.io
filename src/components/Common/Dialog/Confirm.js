@@ -2,8 +2,6 @@ import React from 'react';
 
 import Dialog from './Dialog';
 
-import './Dialog.css';
-
 const Confirm = (props) => {
     let { title, content, show, setShow, onConfirm, onCancel } = props;
 

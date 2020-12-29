@@ -71,12 +71,7 @@ const JobCard = (props) => {
                             <Button text={dateText} />
                         </div>
                     </div>
-                    <div
-                        className='bottom-sec wow fadeIn'
-                        data-wow-duration='2s'
-                    >
-                        {props.job.description}
-                    </div>
+                    <div className='bottom-sec'>{props.job.description}</div>
                 </div>
             )}
         </>

@@ -1,17 +1,17 @@
 setSize = function () {
     var window_width = $(window).width(),
-    window_height = window.innerHeight,
-    header_height = $(".default-header").height(),
-    header_height_static = $(".site-header.static").outerHeight(),
-    fitscreen = window_height - header_height;
+        window_height = window.innerHeight,
+        header_height = $('.default-header').height(),
+        header_height_static = $('.site-header.static').outerHeight(),
+        fitscreen = window_height - header_height;
 
-    $(".fullscreen").css("height", window_height)
-    $(".fitscreen").css("height", fitscreen);
-}
+    $('.fullscreen').css('height', window_height);
+    $('.fitscreen').css('height', fitscreen);
+};
 
 initScrollToTop = function () {
-    //------- Go to Top --------// 
-    $(window).on("scroll", function () {
+    //------- Go to Top --------//
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() > 100) {
             $('#header1').addClass('header-scrolled1');
             $('#back-top').addClass('back-top-animation');
@@ -24,49 +24,55 @@ initScrollToTop = function () {
     /* ---------------------------------------------
         scroll body to 0px on click
      --------------------------------------------- */
-     $('#back-top a').on("click", function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 1000);
+    $('#back-top a').on('click', function () {
+        $('body,html').animate(
+            {
+                scrollTop: 0,
+            },
+            1000
+        );
         return false;
     });
-}
+};
 
 initMobileNav = function () {
+    //------- Superfish nav menu  js --------//
 
-     //------- Superfish nav menu  js --------//  
-
-     $('.nav-menu').superfish({
+    $('.nav-menu').superfish({
         animation: {
-            opacity: 'show'
+            opacity: 'show',
         },
-        speed: 400
+        speed: 400,
     });
 
-
-    //------- Mobile Nav  js --------//  
+    //------- Mobile Nav  js --------//
 
     if ($('#nav-menu-container').length) {
-        $('#mobile-nav').find('.menu-has-children').prepend('<i class="lnr lnr-chevron-down"></i>');
+        $('#mobile-nav')
+            .find('.menu-has-children')
+            .prepend('<i class="lnr lnr-chevron-down"></i>');
 
         $(document).on('click', '.menu-has-children i', function (e) {
             $(this).next().toggleClass('menu-item-active');
             $(this).nextAll('ul').eq(0).slideToggle();
-            $(this).toggleClass("lnr-chevron-up lnr-chevron-down");
+            $(this).toggleClass('lnr-chevron-up lnr-chevron-down');
         });
 
         $(document).on('click', '#mobile-nav-toggle', function (e) {
             $('body').toggleClass('mobile-nav-active');
-            $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+            $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
             $('#mobile-body-overly').toggle();
         });
 
         $(document).click(function (e) {
-            var container = $("#mobile-nav, #mobile-nav-toggle");
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
+            var container = $('#mobile-nav, #mobile-nav-toggle');
+            if (
+                !container.is(e.target) &&
+                container.has(e.target).length === 0
+            ) {
                 if ($('body').hasClass('mobile-nav-active')) {
                     $('body').removeClass('mobile-nav-active');
-                    $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+                    $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
                     $('#mobile-body-overly').fadeOut();
                 }
             }
@@ -75,16 +81,16 @@ initMobileNav = function () {
         $(document).on('click', '.mobile-link', function (e) {
             $('body').removeClass('mobile-nav-active');
             $('#mobile-body-overly').fadeOut();
-            $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+            $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
         });
-    } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
-        $("#mobile-nav, #mobile-nav-toggle").hide();
+    } else if ($('#mobile-nav, #mobile-nav-toggle').length) {
+        $('#mobile-nav, #mobile-nav-toggle').hide();
     }
-}
+};
 
 initOwlCarousel = function () {
     //------- Owl Carusel  js --------//
-    if($('.active-brand-carusel').length) {
+    if ($('.active-brand-carusel').length) {
         $('.active-brand-carusel').owlCarousel({
             items: 5,
             loop: true,
@@ -92,7 +98,7 @@ initOwlCarousel = function () {
             autoplay: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
                 },
                 768: {
                     items: 3,
@@ -102,14 +108,14 @@ initOwlCarousel = function () {
                 },
                 1024: {
                     items: 5,
-                }
-            }
+                },
+            },
         });
     }
-}
+};
 
 hashHandler = function () {
-    const path = window.location.hash.slice(1) // remove leading '#'
+    const path = window.location.hash.slice(1); // remove leading '#'
     const id = path.split('#')[1];
     if (id) {
         var retries = 0;
@@ -124,23 +130,25 @@ hashHandler = function () {
             }
         };
         scroll();
-    }
-    else {
+    } else {
         setTimeout(function () {
             $('html, body').scrollTop(0).show();
-            $('html, body').animate({
-                scrollTop: 0
-            }, 0)
+            $('html, body').animate(
+                {
+                    scrollTop: 0,
+                },
+                0
+            );
         }, 0);
     }
-  }
+};
 
 onLoad = function () {
     setSize();
     initScrollToTop();
     initMobileNav();
 
-    //------- Header Scroll Class  js --------//  
+    //------- Header Scroll Class  js --------//
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
