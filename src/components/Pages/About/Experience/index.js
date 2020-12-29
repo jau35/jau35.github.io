@@ -5,7 +5,7 @@ import 'firebase/database';
 import _ from 'lodash';
 
 import JobCard from './JobCard';
-import JobCardForm from './JobCardForm';
+import JobCardDialog from './JobCardDialog';
 import Button from '../../../Common/Button';
 import Spinner from '../../../Common/Spinner';
 import { ConfigContext } from '../../../App';
@@ -17,7 +17,7 @@ const FB_STORAGE_EXPERIENCE_ROOT = 'about/experience';
 const Experience = () => {
     const context = useContext(ConfigContext);
 
-    const [showAddNewForm, setShowAddNewForm] = useState(false);
+    const [showNewJobDialog, setShowNewJobDialog] = useState(false);
     const [jobsArr, setJobsArr] = useState(null);
 
     useEffect(() => {
@@ -56,8 +56,6 @@ const Experience = () => {
         var updates = {};
         updates[FB_STORAGE_EXPERIENCE_ROOT + '/' + newPostKey] = o;
         firebase.database().ref().update(updates);
-
-        toggleAddNewForm();
     }
 
     function updateJob(o) {
@@ -74,10 +72,6 @@ const Experience = () => {
         updateJob(o);
     }
 
-    function toggleAddNewForm() {
-        setShowAddNewForm(!showAddNewForm);
-    }
-
     return (
         <section
             id='experience'
@@ -87,33 +81,36 @@ const Experience = () => {
                 <div className='row d-flex'>
                     <div className='col-lg-12'>
                         <div className='section-title'>
-                            <h2>Job History</h2>
+                            <h2>Experience</h2>
                         </div>
                     </div>
                 </div>
 
-                {context.loggedInUser &&
-                    (showAddNewForm ? (
-                        <JobCardForm
-                            onSubmitCallback={(o) => createNewJob(o)}
-                            onCancelCallback={() => toggleAddNewForm()}
-                        ></JobCardForm>
-                    ) : (
+                {context.loggedInUser && (
+                    <>
                         <Button
                             text='Add New'
-                            onClickCallback={() => toggleAddNewForm()}
+                            onClickCallback={() => setShowNewJobDialog(true)}
                         ></Button>
-                    ))}
+                        <JobCardDialog
+                            heading='Add Job Experience'
+                            show={showNewJobDialog}
+                            setShow={setShowNewJobDialog}
+                            onSubmit={(o) => createNewJob(o)}
+                            onCancel={() => {}}
+                        ></JobCardDialog>
+                    </>
+                )}
 
                 <div className='row'>
                     {jobsArr ? (
-                        jobsArr.map((value, index) => {
+                        jobsArr.map((value, _) => {
                             return (
                                 <JobCard
-                                    key={index}
+                                    key={value.id}
                                     job={value}
-                                    updateJobCallback={(o) => updateJob(o)}
-                                    deleteJobCallback={(o) => deleteJob(o)}
+                                    updateJob={(o) => updateJob(o)}
+                                    deleteJob={(o) => deleteJob(o)}
                                 ></JobCard>
                             );
                         })

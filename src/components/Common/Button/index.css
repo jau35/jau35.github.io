@@ -54,6 +54,7 @@
 .primary-btn:hover {
     background: #fff;
     border: 1px solid #e45447;
+    color: #e45447;
 }
 .primary-btn:hover:before {
     opacity: 0;

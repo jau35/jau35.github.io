@@ -3,13 +3,13 @@ import React from 'react';
 import Dialog from './Dialog';
 
 const Confirm = (props) => {
-    let { title, content, show, setShow, onConfirm, onCancel } = props;
+    let { heading, content, show, setShow, onConfirm, onCancel } = props;
 
     return (
         <Dialog
             show={show}
             setShow={setShow}
-            title={title}
+            heading={heading}
             actions={[
                 {
                     text: 'Cancel',

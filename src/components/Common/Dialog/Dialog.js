@@ -5,7 +5,7 @@ import Button from '../Button';
 import './index.css';
 
 const Dialog = (props) => {
-    let { title, children, show, setShow, actions } = props;
+    let { heading, children, show, setShow, actions } = props;
 
     function onClick(callback) {
         callback();
@@ -16,7 +16,7 @@ const Dialog = (props) => {
         <div className='dialog-overlay'>
             <div className='dialog-panel'>
                 <div className='dialog-header'>
-                    <h1 className='dialog-title'>{title}</h1>
+                    <h1 className='dialog-title'>{heading}</h1>
                 </div>
                 <div className='dialog-content'>{children}</div>
                 <div className='dialog-btns'>
